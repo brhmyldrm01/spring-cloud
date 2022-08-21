@@ -1,0 +1,17 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+*.iml
+*.ipr
+*.iws
+*.log
+
+.classpath
+.project
+.idea
+.vscode
+.settings
+.gradle
+classes
+dataSources
+.ideaDataSources

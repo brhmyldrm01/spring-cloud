@@ -1,0 +1,16 @@
+
+spcloud:
+  cassandra:
+    contact:
+      point: localhost
+    port: 9042
+    keyspace:
+      name: springcl
+
+    username: cassandra
+    password: cassandra
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8500/eureka/
