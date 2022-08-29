@@ -3,8 +3,9 @@ package com.ibrahim.accountService.configuration;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.cassandra.config.AbstractCassandraConfiguration;
+import org.springframework.data.cassandra.config.CassandraClusterFactoryBean;
 import org.springframework.data.cassandra.config.CassandraTemplateFactoryBean;
-import org.springframework.data.cassandra.config.CqlSessionFactoryBean;
+//import org.springframework.data.cassandra.config.CqlSessionFactoryBean;
 import org.springframework.data.cassandra.config.SchemaAction;
 import org.springframework.data.cassandra.repository.config.EnableCassandraRepositories;
 
@@ -50,12 +51,23 @@ public class CassandraConfiguration extends AbstractCassandraConfiguration {
     }
 
     @Override
+    public CassandraClusterFactoryBean cluster() {
+        CassandraClusterFactoryBean clusterFactoryBean = super.cluster();
+        clusterFactoryBean.setUsername(username);
+        clusterFactoryBean.setPassword(password);
+        return clusterFactoryBean;
+    }
+
+/* on new version of spring (2.7..)
+    @Override
     public CqlSessionFactoryBean cassandraSession() {
         CqlSessionFactoryBean cassandraSession = super.cassandraSession();
         cassandraSession.setUsername(username);
         cassandraSession.setPassword(password);
         return cassandraSession;
     }
+
+ */
     @Override
     public String[] getEntityBasePackages() {
         return new String[]{"com.ibrahim.accountService.entity"};

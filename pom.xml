@@ -15,7 +15,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.2</version>
+		<version>2.2.0.RELEASE</version>
 		<relativePath/>
 	</parent>
 
@@ -34,7 +34,7 @@
 
 	<properties>
 		<java.version>13.0.2</java.version>
-		<spring.cloud.version>2021.0.3</spring.cloud.version>
+		<spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
 	</properties>
 
 	<modules>
@@ -43,6 +43,12 @@
 		<module>config-server</module>
 		<module>eureka-server</module>
 		<module>ticket-service</module>
+		<module>service-common</module>
+		<module>notification-service</module>
+		<module>zipkin-server</module>
+        <module>hystrix-dashboard</module>
+		<module>gateway-server</module>
+		<module>admin-server</module>
 	</modules>
 
 	<dependencyManagement>

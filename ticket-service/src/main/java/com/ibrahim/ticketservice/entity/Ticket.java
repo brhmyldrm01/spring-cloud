@@ -13,6 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Ticket extends BaseEntity {
 
+    @Id
     @Getter
     @GeneratedValue(generator = "UUID")
     @GenericGenerator(name = "UUID",
@@ -43,11 +44,13 @@ public class Ticket extends BaseEntity {
     @Getter
     @Setter
     @Enumerated(EnumType.ORDINAL)
+    @Column(name = "priority_type")
     private PriorityType priorityType;
 
     @Getter
     @Setter
     @Enumerated(EnumType.ORDINAL)
+    @Column(name = "ticket_status")
     private TicketStatus ticketStatus;
 
 

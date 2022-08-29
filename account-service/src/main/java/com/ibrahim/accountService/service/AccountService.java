@@ -1,8 +1,8 @@
 package com.ibrahim.accountService.service;
 
-import com.ibrahim.accountService.dto.AccountDto;
 import com.ibrahim.accountService.entity.Account;
 import com.ibrahim.accountService.repository.AccountRepository;
+import com.ibrahim.client.contract.AccountDto;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.domain.Pageable;
@@ -10,7 +10,6 @@ import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
-import java.util.List;
 import java.util.Optional;
 
 

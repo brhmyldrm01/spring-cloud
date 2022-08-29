@@ -2,11 +2,11 @@
  http://localhost:8501/account
 
 {
-	"username" : "temelt",
-    "name" : "Taner",
-    "surname" : "TEMEL",
-    "email" : "haydi.kodlayalim@gmail.com",
-    "birthDate" : "1999-01-01"
+	"username" : "brhmyldrm",
+    "name" : "İbrahim",
+    "surname" : "YILDIRIM",
+    "email" : "ibrahim@gmail.com",
+    "birthDate" : "2001-01-01"
 }
 
 Ticket Servisi (Ticket Yaratma)

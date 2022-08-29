@@ -1,0 +1,34 @@
+server:
+  port: 8503
+
+
+spring:
+  application:
+    name: notification-service
+  zipkin:
+    base-url: http://localhost:9411
+  rabbitmq:
+    username: ibrahim
+    password: ibrahim
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: msqueue
+  boot:
+    admin:
+      client:
+        url: ${SPRING_BOOT_ADMIN_SERVER_URL:http://localhost:8508}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    instance:
+      hostname: localhost
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka

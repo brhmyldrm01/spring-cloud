@@ -1,0 +1,25 @@
+server:
+  port: ${SERVER_PORT:8508}
+spring:
+  application:
+    name: ADMIN-SERVICE
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10 # instanceları kontrol eder
+    health-check-url-path: /actuator/health # uygulamanın actuator ın ayakta olup olmafığğını veren endpoint -->
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5 # 5 snde birkontrol edetr-->
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/  # env variabşe olarak verildiyse oradan alır-->
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

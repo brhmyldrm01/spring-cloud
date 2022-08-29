@@ -1,15 +1,12 @@
 package com.ibrahim.accountService.api;
 
-import com.ibrahim.accountService.dto.AccountDto;
-import com.ibrahim.accountService.entity.Account;
 import com.ibrahim.accountService.service.AccountService;
+import com.ibrahim.client.contract.AccountDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 /**
